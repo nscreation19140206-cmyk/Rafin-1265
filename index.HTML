@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Online Student Management System</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="bg-primary text-white py-3 mb-4">
+    <div class="container">
+      <h1 class="h3 mb-0">Online Student Management System</h1>
+    </div>
+  </header>
+
+  <main class="container mb-5">
+    <section class="card mb-4">
+      <div class="card-body">
+        <h2 class="card-title text-center">Add Student</h2>
+        <form id="student-form" class="row g-3">
+          <input type="hidden" id="student-id">
+          <div class="col-md-6">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" required>
+          </div>
+          <div class="col-md-6">
+            <label for="father" class="form-label">Father’s Name</label>
+            <input type="text" class="form-control" id="father" required>
+          </div>
+          <div class="col-md-4">
+            <label for="gpa" class="form-label">GPA</label>
+            <input type="number" step="0.01" class="form-control" id="gpa" required>
+          </div>
+          <div class="col-md-4">
+            <label for="class" class="form-label">Class</label>
+            <input type="text" class="form-control" id="class" required>
+          </div>
+          <div class="col-md-4">
+            <label for="course" class="form-label">Course</label>
+            <input type="text" class="form-control" id="course" required>
+          </div>
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="col-md-6 d-flex gap-2 align-items-end">
+            <button type="submit" class="btn btn-success" id="submit-btn">Add Student</button>
+            <button type="button" class="btn btn-secondary" id="reset-btn">Clear</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="table-responsive">
+      <table class="table table-striped table-bordered align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th>Name</th>
+            <th>Father’s Name</th>
+            <th>GPA</th>
+            <th>Class</th>
+            <th>Course</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="students-table"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
